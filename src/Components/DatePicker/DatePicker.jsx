@@ -6,7 +6,7 @@ import {
 import PropTypes from 'prop-types';
 
 
-const DatePicker = ({ date, setDate }) => (
+const DatePicker = ({ setDate }) => (
   <FormGroup css={{
     width: '200px',
     margin: '0 auto',
@@ -14,8 +14,7 @@ const DatePicker = ({ date, setDate }) => (
   >
     <Label
       for="date"
-    >
-    </Label>
+    />
     <Input
       type="date"
       name="date"
@@ -27,7 +26,6 @@ const DatePicker = ({ date, setDate }) => (
 );
 
 DatePicker.propTypes = {
-  date: PropTypes.string.isRequired,
   setDate: PropTypes.func.isRequired,
 };
 

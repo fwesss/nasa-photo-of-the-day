@@ -14,7 +14,7 @@ const App = () => {
     axios
       .get(`https://api.nasa.gov/planetary/apod?api_key=${process.env.REACT_APP_API_KEY}&date=${date}`)
       .then((result) => setImageData(result.data))
-      .catch((error) => console.log(error));
+      .catch(() => console.log('Error retrieving image.'));
   }, [date]);
 
   return (
