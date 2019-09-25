@@ -1,7 +1,9 @@
 /* @define App */
 
 .App {
+  height: 100vh;
   text-align: center;
+  background-color: #282c34;
 }
 
 .App-logo {
