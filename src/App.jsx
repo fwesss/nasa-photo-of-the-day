@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from 'react';
+/** @jsx jsx */
+import { useState, useEffect } from 'react';
 import axios from 'axios';
+import { jsx } from '@emotion/core';
+import { Container } from 'reactstrap';
 
 import Header from './Components/Header/Header';
-import Image from './Components/Image/Image';
-import './App.css';
 
 
 const App = () => {
@@ -18,7 +19,7 @@ const App = () => {
   }, [date]);
 
   return (
-    <div className="App">
+    <Container fluid className="text-center p-0">
       <Header
         date={date}
         setDate={setDate}
@@ -28,23 +29,42 @@ const App = () => {
       />
       {imageData.media_type === 'image'
         ? (
-          <Image
-            image={imageData.url}
-            hdImage={imageData.hdurl}
-          />
+          <a
+            href={imageData.hdurl}
+
+          >
+            <img
+              className="w-100"
+              src={imageData.url}
+              alt={imageData.title}
+            />
+          </a>
         )
         : (
-          <iframe
-            width="900"
-            height="506"
-            src={imageData.url}
-            title={imageData.title}
-            frameBorder="0"
-            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          />
+          <div css={{
+            position: 'relative',
+            width: '100%',
+            height: '0',
+            paddingBottom: '56.25%',
+          }}
+          >
+            <iframe
+              src={imageData.url}
+              title={imageData.title}
+              frameBorder="0"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              css={{
+                position: 'absolute',
+                top: '0',
+                left: '0',
+                width: '100%',
+                height: '100%',
+              }}
+            />
+          </div>
         )}
-    </div>
+    </Container>
   );
 };
 
