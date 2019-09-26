@@ -24,6 +24,7 @@ const App = () => {
   return (
     <Container fluid className="text-center p-0">
       <Header
+        today={today}
         date={date}
         setDate={setDate}
         imageTitle={imageData.title}

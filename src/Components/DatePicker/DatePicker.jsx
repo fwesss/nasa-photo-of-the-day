@@ -6,7 +6,7 @@ import {
 import PropTypes from 'prop-types';
 
 
-const DatePicker = ({ setDate }) => (
+const DatePicker = ({ today, setDate }) => (
   <FormGroup css={{
     margin: '2rem auto 1rem',
   }}
@@ -28,12 +28,19 @@ const DatePicker = ({ setDate }) => (
         width: '200px',
         margin: '0 auto',
       }}
-      onChange={(e) => setDate(e.target.value)}
+      onChange={(e) => {
+        if (e.target.value > today.toISOString().split('T')[0]) {
+          alert("NASA hasn't taken that picture yet. Please select an earlier date.");
+        } else {
+          setDate(e.target.value);
+        }
+      }}
     />
   </FormGroup>
 );
 
 DatePicker.propTypes = {
+  today: PropTypes.instanceOf(Date).isRequired,
   setDate: PropTypes.func.isRequired,
 };
 

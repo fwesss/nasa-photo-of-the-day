@@ -7,7 +7,7 @@ import DatePicker from '../DatePicker/DatePicker';
 
 
 const Header = ({
-  date, setDate, imageTitle, imageDescription,
+  today, date, setDate, imageTitle, imageDescription,
 }) => (
   <Jumbotron
     fluid
@@ -27,7 +27,7 @@ const Header = ({
         {imageTitle}
       </h1>
       <hr className="my-2 bg-white" />
-      <DatePicker date={date} setDate={setDate} />
+      <DatePicker today={today} date={date} setDate={setDate} />
       <p
         className="lead"
         css={{
@@ -41,6 +41,7 @@ const Header = ({
 );
 
 Header.propTypes = {
+  today: PropTypes.instanceOf(Date).isRequired,
   date: PropTypes.string.isRequired,
   setDate: PropTypes.func.isRequired,
   imageTitle: PropTypes.string,
