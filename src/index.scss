@@ -1,4 +1,59 @@
+@font-face {
+  font-weight: 200;
+  font-family: Pridi;
+  font-style: normal;
+  src: local("Pridi ExtraLight"), local(Pridi-ExtraLight),
+    url(//fonts.gstatic.com/s/pridi/v4/2sDdZG5JnZLfkc1SiH0kT0Q.eot?#)
+      format("eot"),
+    url(//fonts.gstatic.com/s/pridi/v4/2sDdZG5JnZLfkc1SiH0kT0A.woff2)
+      format("woff2"),
+    url(//fonts.gstatic.com/s/pridi/v4/2sDdZG5JnZLfkc1SiH0kT0Y.woff)
+      format("woff");
+}
+@font-face {
+  font-weight: 400;
+  font-family: Esteban;
+  font-style: normal;
+  src: local(Esteban),
+    url(//fonts.gstatic.com/s/esteban/v7/r05bGLZE-bdGdN-GROyJ4w.eot?#)
+      format("eot"),
+    url(//fonts.gstatic.com/s/esteban/v7/r05bGLZE-bdGdN-GROyJ5w.woff2)
+      format("woff2"),
+    url(//fonts.gstatic.com/s/esteban/v7/r05bGLZE-bdGdN-GROyJ4Q.woff)
+      format("woff");
+}
+@font-face {
+  font-weight: 300;
+  font-family: "Open Sans Condensed";
+  font-style: normal;
+  src: local("Open Sans Condensed Light"), local(OpenSansCondensed-Light),
+    url(//fonts.gstatic.com/s/opensanscondensed/v13/z7NFdQDnbTkabZAIOl9il_O6KJj73e7Ff1GhDuXMQw.eot?#)
+      format("eot"),
+    url(//fonts.gstatic.com/s/opensanscondensed/v13/z7NFdQDnbTkabZAIOl9il_O6KJj73e7Ff1GhDuXMRw.woff2)
+      format("woff2"),
+    url(//fonts.gstatic.com/s/opensanscondensed/v13/z7NFdQDnbTkabZAIOl9il_O6KJj73e7Ff1GhDuXMQQ.woff)
+      format("woff");
+}
 $enable-shadows: true;
 $enable-gradients: true;
+
+h1 {
+  font-weight: 300;
+  font-family: "Open Sans Condensed", sans-serif;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6,
+label {
+  font-family: "Esteban", serif;
+}
+
+p {
+  font-weight: 200;
+  font-family: "Pridi", serif;
+}
 
 @import "~bootstrap/scss/bootstrap";

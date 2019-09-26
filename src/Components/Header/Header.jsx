@@ -13,7 +13,7 @@ const Header = ({
     fluid
     className="bg-gradient-dark text-white"
     css={{
-      padding: '2rem 0',
+      padding: '3rem',
       margin: '0',
     }}
   >
