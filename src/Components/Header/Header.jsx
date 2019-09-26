@@ -11,6 +11,7 @@ const Header = ({
 }) => (
   <Jumbotron
     fluid
+    className="bg-dark text-white"
     css={{
       padding: '2rem 0',
       margin: '0',
@@ -25,7 +26,7 @@ const Header = ({
       >
         {imageTitle}
       </h1>
-      <hr className="my-2" />
+      <hr className="my-2 bg-white" />
       <DatePicker date={date} setDate={setDate} />
       <p
         className="lead"
