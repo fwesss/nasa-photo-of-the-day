@@ -11,7 +11,7 @@ const Header = ({
 }) => (
   <Jumbotron
     fluid
-    className="bg-dark text-white"
+    className="bg-gradient-dark text-white"
     css={{
       padding: '2rem 0',
       margin: '0',
