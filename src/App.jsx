@@ -8,8 +8,11 @@ import Header from './Components/Header/Header';
 
 
 const App = () => {
+  const today = new Date();
+  today.setHours(0);
+
   const [imageData, setImageData] = useState('');
-  const [date, setDate] = useState(new Date().toISOString().split('T')[0]);
+  const [date, setDate] = useState(today.toISOString().split('T')[0]);
 
   useEffect(() => {
     axios
